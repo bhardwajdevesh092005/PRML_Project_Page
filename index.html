@@ -1,99 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Speaker Recognition using ML</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f3f4f6;
-      margin: 0;
-      padding: 0;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speaker Recognition using Machine Learning</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Speaker Recognition using Machine Learning</h1>
+      <p>Recognizing speakers based on their voice signatures</p>
+    </header>
 
-    header {
-      background-color: #1f2937;
-      color: white;
-      padding: 1.5rem;
-      text-align: center;
-    }
+    <div class="container">
+      <section>
+        <h2>Abstract</h2>
+        <p>
+          This project presents a real-time speaker recognition system developed using machine learning techniques. The system extracts audio features such as MFCC, delta MFCC, and delta-delta MFCC, and classifies speakers using various models, including a Convolutional Neural Network.
+          The dataset used for training and testing consists of audio samples from multiple speakers. The system achieves high accuracy in recognizing speakers, demonstrating the effectiveness of machine learning in audio processing tasks. The project aims to provide a robust solution for applications in security, voice biometrics, and human-computer interaction.
+        </p>
+      </section>
 
-    .container {
-      max-width: 1000px;
-      margin: 2rem auto;
-      background-color: white;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
+      <section>
+        <h2>Techniques Used</h2>
+          <h3>Features used:</h3>
+          <ol>
+            <li>MFCC</li>
+            <li>Delta MFCC</li>
+            <li>Delta-Delta MFCC</li>
+          </ol>
+          <h3>Models used</h3>
+          <ol>
+            <b>Classical ML:</b>
+            <ul>
+              <li>K Nearest Neighbors</li>
+              <li>XG Boost</li>
+              <li>Random Forest</li>
+              <li>K Means Clustering</li>
+            </ul>
+            <li><b>Deep Learning:</b><br> CNN:</li>
+            <p>CNN was applied on multi-dimensional array of MFCCs delta-MFCCs and delta<sup>2</sup>-MFCCs to obtain a high accuracy on the test Data.</p>
+            Embeding Models: <br>
+            <p>Embedings are generated using a pretrained model and sotred in a vector database, then when a test audio arrives the embedings are generated and compared with the stored databse and the best match speaker is identified.
+            </p>
+          </ol>
+      </section>
 
-    h2 {
-      color: #1f2937;
-      margin-top: 1.5rem;
-    }
+      <section class="resources">
+        <h2>Resources</h2>
+        <div class="resource-links">
+          <a href="https://github.com/bhardwajdevesh092005/prml_speaker_recog_spring_2025" target="_blank">GitHub Repo</a>
+          <a href="https://www.kaggle.com/datasets/vjcalling/speaker-recognition-audio-dataset" target="_blank">Dataset</a>
+          
+        </div>
+      </section>
 
-    ul {
-      padding-left: 1.2rem;
-    }
+      <section>
+        <h2>Dataset</h2>
+        <p class="dataset-description">
+          We use publicly available datasets from Kaggle for training and
+          testing our models. The dataset contains audio samples from 50
+          speakers, which are pre-processed to extract features like MFCCs.
+          The dataset is split into training and testing sets to evaluate the
+          performance of our models.
+        </p>
+      </section>
 
-    footer {
-      text-align: center;
-      margin-top: 2rem;
-      padding: 1rem;
-      color: #6b7280;
-    }
-  </style>
-</head>
-<body>
+      <section>
+          <h2>Results</h2>
+          <li style="font-size: 1.2rem; list-style: none; width: 100%; text-align: center;">
+              <span class="model_name" style="font-size: 1.4rem;">
+                  CNN Model:
+              </span>
+              ~92% accuracy
+          </li>
+          <ul class="results">
+          <li>
+            <span class="model_name">
+                KNN: 
+            </span>
+          ~27% accuracy</li>
+          <li>
+            <span class="model_name">
+                XGBoost:
+            </span>
+             ~69.5% accuracy</li>
+          <li>
+            <span class="model_name">
+                Random Forest:
+            </span>
+             ~57% accuracy</li>
+          <li>
+            <span class="model_name">
+                Support Vector Machine:
+            </span class="model_name">
+             ~48% accuracy</li>
+        </ul>
+      </section>
 
-  <header>
-    <h1>Speaker Recognition using Machine Learning</h1>
-    <p>Identifying speakers through voice using classical and deep learning models</p>
-  </header>
+      <section class="team">
+        <h2>Team Members</h2>
+        <ul class="">
+          <div class="team_members">
+            <li>
+              <div>Diwanshu Yadav</div>
+              <img
+                class="profile_photo"
+                src="https://media.licdn.com/dms/image/v2/D5603AQH49TotxjwdWw/profile-displayphoto-shrink_200_200/B56ZQDPcUqG4Ak-/0/1735221168316?e=1749686400&v=beta&t=LGv0YxeZZ5z41an3G_I9438HeoYtAfO_hgVwOjAvky0"
+                alt=""
+              />
+            </li>
+            <li>
+              <div>Devesh Bhardwaj</div>
+              <img
+                class="profile_photo"
+                src="https://media.licdn.com/dms/image/v2/D5603AQEXrZAqwCHhWA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1712241450590?e=1749686400&v=beta&t=Vq5TWdQxs9MWFl6mxxJQAQO4yut5wfFnzb1v5tt84-M"
+                alt=""
+              />
+            </li>
+            <li>
+              <div>Divya Saboo</div>
+              <img
+                class="profile_photo"
+                src="https://media.licdn.com/dms/image/v2/D5603AQFDnUFgWdOKsQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1693148416234?e=1749686400&v=beta&t=p3PbkCLZE47prdJCKBn5NuE2rQ0T09HkQkGZVXI6gik"
+                alt=""
+              />
+            </li>
+          </div>
+          <div class="team_members">
+            <li>
+              <div>Nishikanth Dhamgunde</div>
+              <img
+                class="profile_photo"
+                src="https://media.licdn.com/dms/image/v2/D4D03AQH4MkKYgbdErw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1729173107502?e=1749686400&v=beta&t=zBafxLxiJN7Vh_Et0jPxW7-jeqImvifZ3JpfkvzdpNg"
+                alt=""
+              />
+            </li>
+            <li>
+              <div>Vivek Kohli</div>
+              <img
+                class="profile_photo"
+                src="https://media.licdn.com/dms/image/v2/D5603AQGCrM6_xzfMDA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1720092470976?e=1749686400&v=beta&t=LqbnqUnCoyhQJr7WxbnElalZAAkMqXwqRBet-nWci0U"
+                alt=""
+              />
+            </li>
+            <li>
+                <div>Kritika Jain</div>
+                <img
+                  class="profile_photo"
+                  src="https://media.licdn.com/dms/image/v2/D5603AQF-zGSSH8_czw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1712857387391?e=1749686400&v=beta&t=aOhPt-NalspfjsKVkII7a1d-duiMlZ_rjgCBaNuvCW4"
+                  alt=""
+                />
+            </li>
+          </div>
+        </ul>
+      </section>
+    </div>
 
-  <div class="container">
-    <h2>🔍 Project Overview</h2>
-    <p>
-      This project focuses on recognizing speakers from audio inputs using various machine learning techniques.
-      The aim is to build a robust system that can distinguish between speakers based on voice patterns.
-    </p>
-
-    <h2>🧠 Techniques Used</h2>
-    <ul>
-      <li>Feature Extraction using MFCC (Mel-Frequency Cepstral Coefficients)</li>
-      <li>Classical ML: K-Nearest Neighbors, SVM, Random Forest</li>
-      <li>Deep Learning: Convolutional Neural Networks (CNN)</li>
-      <li>Dimensionality Reduction: PCA, t-SNE (for visualization)</li>
-    </ul>
-
-    <h2>📁 Dataset</h2>
-    <p>
-      The project uses publicly available datasets such as:
-    </p>
-    <ul>
-      <li><strong>VoxCeleb</strong>: A large-scale speaker identification dataset</li>
-      <li><strong>LibriSpeech</strong>: Read English speech corpus</li>
-    </ul>
-
-    <h2>📊 Results</h2>
-    <ul>
-      <li>Classical ML models achieved ~80% accuracy</li>
-      <li>CNN-based model achieved >90% accuracy on test set</li>
-      <li>Real-time speaker prediction tested on unseen audio samples</li>
-    </ul>
-
-    <h2>👨‍💻 Team Members</h2>
-    <ul>
-      <li>Alice Johnson – ML Engineer</li>
-      <li>Bob Smith – Audio Processing Specialist</li>
-      <li>Charlie Lee – Full-Stack Developer</li>
-    </ul>
-  </div>
-
-  <footer>
-    &copy; 2025 Speaker Recognition Project. All rights reserved.
-  </footer>
-
-</body>
+    <footer>
+      &copy; 2025 Speaker Recognition Project. All rights reserved.
+    </footer>
+  </body>
 </html>
